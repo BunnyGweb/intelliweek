@@ -1,4 +1,4 @@
-import { differenceInDays, addDays } from "date-fns";
+import { differenceInDays } from "date-fns";
 
 export function calculateStudyDuration(
   currentDate: Date,

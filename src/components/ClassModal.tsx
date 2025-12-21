@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, Plus, Trash2 } from "lucide-react";
-import type { ClassItem } from "../types";
+import type { ClassItem, TaskType } from "../types";
 
 interface ClassModalProps {
   isOpen: boolean;
@@ -92,7 +92,11 @@ export function ClassModal({
       id: initialData?.id || crypto.randomUUID(),
       name,
       color,
-      defaultTasks: templates.map(({ name, duration }) => ({ name, duration })),
+      defaultTasks: templates.map(({ name, duration }) => ({
+        name,
+        duration,
+        type: "assignment" as TaskType,
+      })),
     });
 
     // Clean up

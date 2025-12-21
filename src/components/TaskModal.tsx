@@ -30,7 +30,6 @@ export function TaskModal({
       setTitle(
         `${classItem.name} ${type.charAt(0).toUpperCase() + type.slice(1)}`
       );
-      setDuration(classItem.defaultDuration);
     }
   }, [isOpen, classItem, type]);
 
